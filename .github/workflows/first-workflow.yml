@@ -1,0 +1,12 @@
+name: first-workflow # name: key, defines the actual name of this workflow 
+
+on: workflow_dispatch # on: key, here one or multiple events are defined
+
+jobs: # jobs: key, here one or multiple jobs are defined
+  first-job: # the actual name of our first job
+    runs-on: ubuntu-latest # first job's runner machine
+    steps: #steps: key, the steps that this job runner will execute
+      - name: print something # name: key, name of the first step
+        run: echo "First Workflow" # run: key, the actual command that will be executed 
+      - name: print goodbye # name: key, name of the second step
+        run: echo "GoodBye!" # run: key, the actual command that will be executed
